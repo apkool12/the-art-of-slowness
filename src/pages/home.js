@@ -15,12 +15,13 @@ const Home = ({ openLoginModal, isLoggedIn, userProfile }) => (
 
       {isLoggedIn ? (
         <section className='profile_section'>
-          <div pclassName= "profile_card">
+          <div className= "profile_card">
             <h3>유저 정보</h3>
               <p>닉네임: {userProfile.nickname}</p>
               <p>레벨: {userProfile.level}</p>
-              <p>출석일수: {userProfile.attendanceDays}</p>
+              <p>뱃지: {userProfile.badges}</p>
               <p>칭호: {userProfile.title}</p>
+              <p>날짜: {userProfile.login_at}</p>
           </div>
         </section>
       ) : (

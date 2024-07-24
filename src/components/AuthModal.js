@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
@@ -18,12 +18,16 @@ const AuthModal = ({
   handleSubmit,
   openSignupModal
 }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false); // 추가된 상태
+
   if (!isOpen) return null;
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     if (type === 'login') {
+      setIsSubmitting(true); // 요청 시작 시 버튼 비활성화
+
       try {
         const response = await axios.post('https://port-0-thebeautyofslow-lxmynpl6f586b2fd.sel5.cloudtype.app/login/', {
           user_email: email,
@@ -53,12 +57,16 @@ const AuthModal = ({
         } else {
           console.error('요청 오류:', error.message);
         }
+      } finally {
+        setIsSubmitting(false); // 요청 완료 후 버튼 활성화
       }
     } else if (type === 'signup') {
       if (password !== passwordConfirm) {
         alert('비밀번호가 일치하지 않습니다.');
         return;
       }
+      setIsSubmitting(true); // 요청 시작 시 버튼 비활성화
+
       try {
         const response = await axios.post('https://port-0-thebeautyofslow-lxmynpl6f586b2fd.sel5.cloudtype.app/register/', {
           user_email: email,
@@ -67,7 +75,7 @@ const AuthModal = ({
         });
         alert('회원가입 성공!');
         console.error('서버 응답 오류:', response.data);
-        handleSubmit(e);
+        handleSubmit();
       } catch (error) {
         alert('회원가입 실패!');
         if (error.response) {
@@ -75,6 +83,8 @@ const AuthModal = ({
         } else {
           console.error('요청 오류:', error.message);
         }
+      } finally {
+        setIsSubmitting(false); // 요청 완료 후 버튼 활성화
       }
     }
   };
@@ -101,7 +111,7 @@ const AuthModal = ({
                 type='password'
                 value={password}
                 onChange={handlePasswordChange}
-                placeholder="영문,숫자 조합 10자 이내 비밀번호"
+                placeholder="영문,숫자 조합 15자 이내 비밀번호"
                 maxLength={15}
                 className='Login_font'
               />
@@ -155,7 +165,7 @@ const AuthModal = ({
           )}
 
           {error && <p className='error-message'>{error}</p>}
-          <button type='submit' className={`login_button ${type === 'login' ? 'L1' : 'L3'}`}>
+          <button type='submit' className={`login_button ${type === 'login' ? 'L1' : 'L3'}`} disabled={isSubmitting}>
             {type === 'login' ? '로그인하기' : '가입하기'}
           </button>
           {type === 'login' && (

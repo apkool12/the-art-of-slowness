@@ -20,8 +20,12 @@
   src: url("./font/NanumL2.ttf") format("truetype");
 }
 
-
-
+.font_light1{
+  font-family: "NanumL1";
+}
+.font_light2{
+  font-family: "NanumL2";
+}
 /* 전체 배경색 설정 */
 body {
   background-color: #FAF8F4;
@@ -103,7 +107,7 @@ body {
 
   .absolute-img1 {
     position: absolute; /* 이미지를 absolute로 설정하여 위치를 고정 */
-    top: 52%; /* 원하는 위치로 설정 */
+    top: 58%; /* 원하는 위치로 설정 */
     left: 24%; /* 원하는 위치로 설정 */
     width: 39%;
     height: auto;
@@ -112,7 +116,7 @@ body {
 
   .absolute-img2 {
     position: absolute; /* 이미지를 absolute로 설정하여 위치를 고정 */
-    top: 81%; /* 원하는 위치로 설정 */
+    top: 83%; /* 원하는 위치로 설정 */
     left: 19%; /* 원하는 위치로 설정 */
     width: 70%;
     height: auto;
@@ -120,13 +124,13 @@ body {
 
   .vector{
     position: absolute;
-    top: 44%;
+    top: 47.5%;
     left: 30%
   }
   
   .vector2{
     position: absolute;
-    top: 71.8%;
+    top: 73.8%;
     left: 30%
   }
 
@@ -182,9 +186,9 @@ body {
   background-color: #000000; /* 유저 박스 배경색 */
   border-radius: 13px;
   padding: 8px 12px;
-  margin-right: 100px;
+  margin-right: 7%;
   color: #fff; /* 유저 박스 텍스트 색 */
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .nav_login .login,
@@ -222,8 +226,10 @@ body {
 }
 
 .nav_bar.scrolled .nav_logo img {
-  height: 50px; /* 스크롤될 때 작아지도록 로고 크기 조정 */
-}
+    width: 50%;
+    height: 50%;
+  } /* 스크롤될 때 작아지도록 로고 크기 조정 */
+
 
 @media (max-width: 768px) {
   .nav_bar.scrolled {
@@ -233,7 +239,7 @@ body {
   }
 
   .nav_main {
-    margin-left: 10%; /* Adjusted margin for smaller screens */
+    margin-left: 1%; /* Adjusted margin for smaller screens */
     justify-content: center;
     flex-direction: row; /* Ensure the navigation items are in a row */
     display: flex; /* Make sure the flexbox is applied */
@@ -245,39 +251,122 @@ body {
   }
 
   .nav_main a {
-    font-size: 14px; /* Reduced font size for smaller screens */
+    font-size: 12px; /* Reduced font size for smaller screens */
   }
 
   .nav_login {
-    margin-right: 20px; /* Adjusted margin for smaller screens */
-    margin-top: 30px; /* Adjusted margin for smaller screens */
+    margin-right: 5%; /* Adjusted margin for smaller screens */
+    margin-top: 1%; /* Adjusted margin for smaller screens */
   }
 
   .nav_login .login,
   .nav_login .signup {
-    font-size: 12px; /* Reduced font size for smaller screens */
+    font-size: 0.4rem; /* Reduced font size for smaller screens */
   }
+
+  .nav_logout {
+    display: flex;
+    align-items: center;
+    background-color: #000000; /* 유저 박스 배경색 */
+    border-radius: 13px;
+    padding: 5px 12px;
+    margin-right: 5%;
+    color: #fff; /* 유저 박스 텍스트 색 */
+    font-size: 0.5rem;
+  }
+
 }
-
-
 /* 프로필 섹션 스타일 */
 
 
-.profile_section{
-  background-color: #0090F4;
+.profile_section {
   padding: 100px;
   text-align: left;
   border-radius: 10px;
   margin: auto;
   margin-right: 200px;
-  margin-top: 250px;
-
-  opacity: 0.3;
+  margin-top: 8%;
+  margin-bottom: -2%;
   width: 500px;
-  flex-direction: center; /* 버튼들을 세로로 배치합니다 */
-  align-items: center; /* 가운데 정렬합니다 */
+  height: 50%;
 }
 
+.profile_card {
+  background-color: #fff;  /* 카드 배경색 */
+  border-radius: 15px;      /* 둥근 모서리 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 */
+  padding: 20px;           /* 카드 내부 여백 */
+  width: 100%;            /* 카드 너비를 100%로 설정 */
+  max-width: 100%;         /* 카드 너비 최대값 */
+  text-align: center;      /* 카드 내부 텍스트 중앙 정렬 */
+}
+
+.profile_card h3 {
+  background-color: #1E88E5;
+  border-radius: 15px;  
+  width: 20%;              /* 제목 너비 조정 */
+  margin: 0 auto 10%;    /* 제목 가운데 정렬과 여백 설정 */
+  font-size: 20px;        /* 제목 글자 크기 */
+  color: #fff;            /* 제목 글자 색상 */
+  padding: 10px;          /* 제목 내부 여백 추가 */
+}
+
+.profile_card p {  
+  margin: 2% 0;           /* 항목 간 여백 */
+  font-size: 16px;        /* 항목 글자 크기 */
+  font-family: 'NanumL1';
+  color: #666;            /* 항목 글자 색상 */
+}
+
+.profile_card p:first-of-type {
+  margin-top: 0;          /* 첫 번째 항목 상단 여백 제거 */
+}
+
+
+@media (max-width: 768px) {
+
+  .profile_section {
+    padding: 100px;
+    text-align: left;
+    border-radius: 10px;
+    margin: auto;
+    margin-right: 200px;
+    margin-top: 30%;
+    width: 500px;
+    height: 50%;
+  }
+
+.profile_card {
+    background-color: #fff;  /* 카드 배경색 */
+    border-radius: 15px;      /* 둥근 모서리 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 */
+    padding: 30px;           /* 카드 내부 여백 */
+    width: 50%;            /* 카드 너비를 100%로 설정 */
+    max-width: 100%;         /* 카드 너비 최대값 */
+    text-align: center;      /* 카드 내부 텍스트 중앙 정렬 */
+  }
+
+  .profile_card h3 {
+    background-color: #1E88E5;
+    border-radius: 15px;  
+    width: 40%;              /* 제목 너비 조정 */
+    margin: 0 auto 10%;    /* 제목 가운데 정렬과 여백 설정 */
+    font-size: 20px;        /* 제목 글자 크기 */
+    color: #fff;            /* 제목 글자 색상 */
+    padding: 10px;          /* 제목 내부 여백 추가 */
+  }
+
+  .profile_card p {  
+    margin: 2% 0;           /* 항목 간 여백 */
+    font-size: 16px;        /* 항목 글자 크기 */
+    font-family: 'NanumL1';
+    color: #666;            /* 항목 글자 색상 */
+  }
+
+  .profile_card p:first-of-type {
+    margin-top: 0;          /* 첫 번째 항목 상단 여백 제거 */
+  }
+}
 
 
 /* 로그인 섹션 스타일 */
@@ -499,6 +588,7 @@ body {
   font-size: 30px;
 }
 
+
 /* 회원가입 모달 */
 
 .SignUp_modal-overlay {
@@ -560,6 +650,31 @@ body {
   font-size: 30px;
 }
 
+@media (max-width: 768px) {
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 30px;
+    max-width: 400px;
+    width: 90%;
+    height: 55%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .SignUp_modal {
+    background: white;
+    padding: 20px;
+    border-radius: 30px;
+    max-width: 400px;
+    width: 100%;
+    height: 77.5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+}
+
 /* 특징 섹션 스타일 */
 .features_section {
   text-align: center;
@@ -609,7 +724,7 @@ body {
 
   .description_section {
     width: 90%;
-    padding: 20px;
+    padding: 1.5%;
   }
 
   .features_section {
@@ -695,7 +810,7 @@ body {
   background-color: #1A1A1A;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .footer-content {
@@ -707,19 +822,21 @@ body {
 .footer-links {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px; /* Added margin bottom for spacing */
+
 }
 
 .footer-links a {
   color: inherit;
   text-decoration: none;
-  margin: 0 15px; /* Adjusted margin for spacing */
+  margin: 0 20px; /* Adjusted margin for spacing */
+  font-family: 'NanumL2';
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px; /* Added margin bottom for spacing */
+  margin-right: 30%;
+  
 }
 
 .social-icons a {
@@ -731,12 +848,23 @@ body {
 }
 
 .footer-icon {
-  margin-left: 10px; /* Adjust margin-left to move the logo/icon slightly to the right */
-  margin-bottom: 20px; /* Maintain bottom margin for spacing */
+  position: relative;
+  margin-left: 10%; /* Adjust margin-left to move the logo/icon slightly to the right */
+  margin-bottom: 50%; /* Maintain bottom margin for spacing */
+}
+
+.F_dump {
+
+  margin-right: 21%;
+
 }
 
 .address {
   margin-bottom: 10px; /* Added margin bottom for spacing */
+}
+.copyright {
+  margin-right: 5.1%;
+  font-family: 'NanumL2'; /* Added margin bottom for spacing */
 }
 
 /* 반응형 디자인 추가 */
