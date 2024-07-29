@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+
+import './App.css';
+
+import './font.css';
+import './header.css';
+import './footer.css';
+import './modal.css';
+
 import AuthModal from './components/AuthModal';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 import Home from './pages/home';
 import MonthlyStats from './pages/MonthlyStat';
 import Steps from './pages/Steps';
-import './App.css';
+
 
 const App = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -74,7 +83,7 @@ const App = () => {
     setUserProfile(null);
     alert('로그아웃 되었습니다.');
   };
-
+    
   return (
     <div className='app'>
       <Header openLoginModal={openLoginModal} openSignupModal={openSignupModal} isLoggedIn={isLoggedIn} handleLogout={handleLogout} />

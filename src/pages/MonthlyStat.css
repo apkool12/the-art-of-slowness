@@ -1,0 +1,376 @@
+/* @font-face 설정 */
+@font-face {
+  font-family: "nanum";
+  font-weight: 800;
+  src: url("../font/Nanum.ttf") format("truetype");
+  line-height: 32;
+}
+
+@font-face {
+  font-family: "nanum_bold";
+  font-weight: 800;
+  src: url("../font/Nanum_bold.ttf") format("truetype");
+  line-height: 32;
+}
+
+/* 기본 스타일 */
+.Monthly-back {
+  position: relative;
+  background-image: url('../image/background_Monthly.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.monthly-stat {
+  max-width: 1200px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'NanumL1', sans-serif;
+}
+
+.monthly-stat img {
+  position: absolute;
+  top: 8%;
+  left: 30%;
+  width: 15%;
+  height: auto;
+}
+
+.stat-header {
+  background-color: #f9f9f9;
+  border-radius: 40px;
+  padding: 10%;
+  height: 30%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40%;
+  margin-bottom: 1%;
+}
+
+.stat-header .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.stat-header .title h1 {
+  font-family: 'nanum_bold';
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 35.36px;
+  color: #1a1a1a;
+}
+
+.calendar-container {
+  margin: 20px 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.nav-button:hover {
+  background-color: #1565C0;
+}
+
+.nav-button:first-of-type {
+  margin-right: 20%;
+}
+
+.nav-button:last-of-type {
+  margin-left: 20%;
+}
+
+.calendar {
+  margin-top: 0px;
+}
+
+.calendar table {
+  width: 100%;
+  border-spacing: 30px;
+}
+
+.calendar th,
+.calendar td {
+  height: 80px;
+  width: 10px;
+  text-align: center;
+}
+
+.calendar th {
+  font-family: nanum;
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+.calendar td {
+  border: 1px solid #ddd;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.calendar td.filled {
+  background-color: #1E88E5;
+  color: transparent;
+}
+
+.calendar td.empty {
+  background-color: transparent;
+  border: 5px solid transparent;
+}
+
+
+.small-calendar-container {
+  max-width: 200px; /* 작은 캘린더의 최대 너비 설정 */
+	border-radius: 50px;
+  margin: auto; /* 중앙 정렬 */
+}
+
+.small-calendar-title {
+  text-align: center;
+  font-size: 16px; /* 제목 크기 조정 */
+  margin-bottom: 10px; /* 제목과 테이블 간 간격 조정 */
+}
+
+
+.small-calendar table {
+  width: 100%; /* 테이블 너비를 100%로 설정 */
+  border-collapse: separate; /* 셀 간격을 분리 */
+  border-spacing: 10px; /* 셀 간격 추가 */
+}
+
+.small-calendar th, .small-calendar td {
+  padding: 3px; /* 셀 패딩 조정 */
+  text-align: center; /* 셀 텍스트 중앙 정렬 */
+  font-size: 14px; /* 폰트 크기 조정 */
+}
+
+.small-calendar th {
+  background-color: #ff2a2a; /* 헤더 배경색 조정 */
+	gap: 40px;
+}
+
+.small-calendar td {
+	border-radius: 5px;
+}
+
+.small-calendar td.filled {
+  background-color: #1E88E5; /* 채워진 날짜 배경색 */
+  color: #fff; /* 글자 색상 조정 */
+}
+
+.small-calendar td.empty {
+  background-color: #ffffff; /* 비어있는 날짜 배경색 */
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.legend-item {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #bbbbbb;
+  border-radius: 30%;
+  margin: 0 10px;
+}
+
+.legend-item.completed {
+  background-color: #0090F4;
+}
+
+.legend-item.partial {
+  background-color: #00C2FF;
+}
+
+.legend-item.little {
+  background-color: #B5E3F2;
+}
+
+.legend-item.ongoing {
+  background-color: #FF5C01;
+}
+
+.legend-item.none {
+  background-color: #ffffff;
+}
+
+.legend-activity {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+}
+
+.legend-activity-card {
+  background-color: #FAF8F4;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #1A1A1A;
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.legend-activity-card p {
+  font-family: 'nanum';
+  font-size: 1.2em;
+  line-height: 17.68px;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.legend-activity-card p2 {
+  font-family: 'nanum';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 13.26px;
+}
+
+.legend-activity-card span {
+  font-family: 'nanum_bold';
+  display: block;
+  color: #0090F4;
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 26.52px;
+  font-weight: bold;
+}
+
+.activity-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activity-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 10%;
+  gap: 100px;
+}
+
+.activity-header img {
+  position: absolute;
+  top: 38%;
+  left: -16%;
+  width: 5%; 
+  height: auto;
+}
+
+
+.activity-header h3 {
+  font-size: 32px;
+  font-family: 'nanum_bold';
+  display: flex;
+  margin-left: -9%;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.activity-header span {
+  margin-left: -6%;
+  margin-right: 50%;
+  flex-shrink: 0;
+  color: #6A737D;
+}
+
+.activity-card h3, .top-activities h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.activity-detail p, .top-activity-card p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #180606;
+}
+
+.activity-detail-card {
+  background-color: #FAF8F4;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 30%;
+  color: #745c5c;
+  text-align: center;
+  flex: 1%;
+  margin: 0 10px;
+}
+
+.activity-steps {
+  
+  padding: 5%;
+}
+
+.activity-step {
+  display: flex;
+  justify-content: space-around; /* 요소 간격 조정 */
+  margin-left: 0%;
+  gap: 5%; /* 요소 간격 조정 */
+  height: 5%;
+}
+
+.calendar-small {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px;
+  width: 50%;
+
+
+}
+
+
+.top-activities {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-activity {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-activity-card {
+  background-color: #1E88E5;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.top-activity-card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+

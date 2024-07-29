@@ -1,94 +1,67 @@
-/* CSS 코드 시작 */
-/* @font-face 설정 */
-@font-face {
-  font-family: "nanum";
-  font-weight: 100;
-  src: url("./font/Nanum.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "NanumL1";
-  font-style: normal;
-  font-weight: 100;
-  src: url("./font/NanumL1.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "NanumL2";
-  font-style: normal;
-  font-weight: bold;
-  src: url("./font/NanumL2.ttf") format("truetype");
-}
-
-.font_light1{
-  font-family: "NanumL1";
-}
-.font_light2{
-  font-family: "NanumL2";
-}
 /* 전체 배경색 설정 */
+
 body {
   background-color: #FAF8F4;
   margin: 0;
   font-family: "nanum", Arial, sans-serif; /* 폰트 적용 */
-  background-image: url('./image/background.png');
-  background-size: cover;; /* 배경 이미지를 화면에 꽉 채우도록 설정 */
-  background-repeat: no-repeat; /* 배경 이미지 반복 없이 한 번만 표시 */
-  background-position: center top 500px; /* 배경 이미지를 가운데 정렬 */
-  height: auto;
-  background-attachment: local;
 } 
 
 .app { 
-  position: relative
+  position: relative;
 }
 
 .home{
   position: relative;
-
+  background-image: url('./image/background.png');
+  padding-bottom: 3%;
+  background-size: cover; /* 배경 이미지를 화면에 꽉 채우도록 설정 */
+  background-repeat: no-repeat; /* 배경 이미지 반복 없이 한 번만 표시 */
+  background-position: center 350px; /* 배경 이미지를 가운데 정렬 */
+  width: 100%;
+  height: 300%;
 }
+
 
 .slowness_Theme {
   position: absolute; /* 이미지를 absolute로 설정하여 위치를 고정 */
-  top: 1%; /* 원하는 위치로 설정 */
-  left: 19%; /* 원하는 위치로 설정 */
-  width: 16%;
+  bottom: 72%; /* 원하는 위치로 설정 */
+  left: 17%; /* 원하는 위치로 설정 */
+  width: 18%;
   height: auto;
 }
 
 .absolute-img1 {
   position: absolute; /* 이미지를 absolute로 설정하여 위치를 고정 */
   top: 75%; /* 원하는 위치로 설정 */
-  left: 19%; /* 원하는 위치로 설정 */
-  width: 16%;
+  left: 21%; /* 원하는 위치로 설정 */
+  width: 13%;
   height: auto;
-
 }
 .absolute-img2 {
   position: absolute; /* 이미지를 absolute로 설정하여 위치를 고정 */
-  top: 75%; /* 원하는 위치로 설정 */
-  left: 60%; /* 원하는 위치로 설정 */
+  top: 72%; /* 원하는 위치로 설정 */
+  left: 63%; /* 원하는 위치로 설정 */
   width: 21%;
   height: auto;    
 }
 
 .vector{
   position: absolute;
-  top: 65%;
+  top: 62%;
   left: 24%
 }
 
 .vector2{
   position: absolute;
-  top: 65%;
+  top: 62%;
   right: 24%
 }
 
 @media (max-width: 768px) {
-
-  body {
+  .home {
     background-attachment: fixed;
     background-image: url('./image/background_media.png');
+    margin-bottom: -9.3%;
   }
 
   .slowness_Theme {
@@ -107,7 +80,7 @@ body {
 
   .absolute-img1 {
     position: absolute; /* 이미지를 absolute로 설정하여 위치를 고정 */
-    top: 58%; /* 원하는 위치로 설정 */
+    top: 52%; /* 원하는 위치로 설정 */
     left: 24%; /* 원하는 위치로 설정 */
     width: 39%;
     height: auto;
@@ -116,7 +89,7 @@ body {
 
   .absolute-img2 {
     position: absolute; /* 이미지를 absolute로 설정하여 위치를 고정 */
-    top: 83%; /* 원하는 위치로 설정 */
+    top: 79%; /* 원하는 위치로 설정 */
     left: 19%; /* 원하는 위치로 설정 */
     width: 70%;
     height: auto;
@@ -124,205 +97,78 @@ body {
 
   .vector{
     position: absolute;
-    top: 47.5%;
-    left: 30%
+    top: 42.2%;
+    left: 32%
   }
   
   .vector2{
     position: absolute;
-    top: 73.8%;
-    left: 30%
+    top: 69.8%;
+    left: 32%
   }
 
 }
 
-/* 헤더 스타일 */
-
-.nav_logo {
-  margin-left: 100px; /* 로고를 오른쪽으로 옮김 */
-}
-
-.nav_logo img {
-  height: 80px; /* 로고 이미지 높이 조정 */
-}
-
-.nav_main {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-left: 10px;
-}
-
-.nav_main li {
-  margin: 0 5px;
-  margin-left: 75px;
-  margin-right: 75px;
-  
-}
-
-.nav_main a {
-  color: #000;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.nav_main a:hover {
-  text-decoration: underline;
-}
-
-.nav_login {
-  display: flex;
-  align-items: center;
-  background-color: #000000; /* 유저 박스 배경색 */
-  border-radius: 13px;
-  padding: 8px 12px;
-  margin-right: 100px;
-}
-
-.nav_logout {
-  display: flex;
-  align-items: center;
-  background-color: #000000; /* 유저 박스 배경색 */
-  border-radius: 13px;
-  padding: 8px 12px;
-  margin-right: 7%;
-  color: #fff; /* 유저 박스 텍스트 색 */
-  font-size: 1rem;
-}
-
-.nav_login .login,
-.nav_login .signup {
-  color: #fff; /* 유저 박스 텍스트 색 */
-  font-size: 14px;
-  margin-left: 10px; /* 아이템 간의 간격 */
-  padding: 0 10px;
-}
-
-.nav_login .signup {
-  border-left: 1px solid #fff; /* 구분선 추가 */
-  padding-left: 10px;
-}
-
-.nav_bar {
-  background-color: transparent;
-  color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  transition: background-color 0.3s ease, padding 0.3s ease;
-}
-
-.nav_bar.scrolled {
-  background-color: #fff;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.nav_bar.scrolled .nav_logo img {
-    width: 50%;
-    height: 50%;
-  } /* 스크롤될 때 작아지도록 로고 크기 조정 */
-
-
-@media (max-width: 768px) {
-  .nav_bar.scrolled {
-    background-color: #fff;
-    padding: 1%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav_main {
-    margin-left: 1%; /* Adjusted margin for smaller screens */
-    justify-content: center;
-    flex-direction: row; /* Ensure the navigation items are in a row */
-    display: flex; /* Make sure the flexbox is applied */
-    align-items: center; /* Vertically align the items */
-  }
-
-  .nav_main li {
-    margin: 5px; /* Adjusted margin for smaller screens */
-  }
-
-  .nav_main a {
-    font-size: 12px; /* Reduced font size for smaller screens */
-  }
-
-  .nav_login {
-    margin-right: 5%; /* Adjusted margin for smaller screens */
-    margin-top: 1%; /* Adjusted margin for smaller screens */
-  }
-
-  .nav_login .login,
-  .nav_login .signup {
-    font-size: 0.4rem; /* Reduced font size for smaller screens */
-  }
-
-  .nav_logout {
-    display: flex;
-    align-items: center;
-    background-color: #000000; /* 유저 박스 배경색 */
-    border-radius: 13px;
-    padding: 5px 12px;
-    margin-right: 5%;
-    color: #fff; /* 유저 박스 텍스트 색 */
-    font-size: 0.5rem;
-  }
-
-}
 /* 프로필 섹션 스타일 */
 
 
 .profile_section {
   padding: 100px;
-  text-align: left;
   border-radius: 10px;
   margin: auto;
   margin-right: 200px;
   margin-top: 8%;
-  margin-bottom: -2%;
   width: 500px;
   height: 50%;
+  font-size: 40px;  
+}
+
+.profile_section span {
+  color: #0090F4;
 }
 
 .profile_card {
   background-color: #fff;  /* 카드 배경색 */
-  border-radius: 15px;      /* 둥근 모서리 */
+  margin-top: 8%;
+  margin-bottom: -30%;
+  margin-left: -0%;
+  border-radius: 75px;      /* 둥근 모서리 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 */
-  padding: 20px;           /* 카드 내부 여백 */
+  padding: 50px;           /* 카드 내부 여백 */
   width: 100%;            /* 카드 너비를 100%로 설정 */
   max-width: 100%;         /* 카드 너비 최대값 */
   text-align: center;      /* 카드 내부 텍스트 중앙 정렬 */
+  display: flex;           /* Flexbox 사용 */
+  justify-content: space-around; /* 아이템들을 공간에 고르게 배치 */
+  align-items: center;     /* 아이템들을 세로축 중앙 정렬 */
 }
 
 .profile_card h3 {
-  background-color: #1E88E5;
+
   border-radius: 15px;  
-  width: 20%;              /* 제목 너비 조정 */
+  width: auto;              /* 제목 너비 조정 */
   margin: 0 auto 10%;    /* 제목 가운데 정렬과 여백 설정 */
   font-size: 20px;        /* 제목 글자 크기 */
-  color: #fff;            /* 제목 글자 색상 */
+  color: #000;            /* 제목 글자 색상 */
   padding: 10px;          /* 제목 내부 여백 추가 */
+  font-weight: bold;
+  text-align: center;
 }
 
-.profile_card p {  
-  margin: 2% 0;           /* 항목 간 여백 */
-  font-size: 16px;        /* 항목 글자 크기 */
-  font-family: 'NanumL1';
-  color: #666;            /* 항목 글자 색상 */
+.profile_value {  
+  display: inline-block;
+  margin: 2% 0;
+  width: 100%;           /* 항목 간 여백 */
+  font-size: 32px;        /* 항목 글자 크기 */
+  font-family: 'Rix';
+  color: #000000;            /* 항목 글자 색상 */
 }
 
-.profile_card p:first-of-type {
-  margin-top: 0;          /* 첫 번째 항목 상단 여백 제거 */
+.profile_value span{  
+  background: linear-gradient(45deg, #00BD56, #88E342, #C3F439); /* 색1에서 색3까지의 45도 그라데이션 */
+  -webkit-background-clip: text; /* 텍스트만 그라데이션 효과가 적용되도록 지정 */
+  color: transparent; /* 텍스트를 투명하게 함 */
 }
-
-
 @media (max-width: 768px) {
 
   .profile_section {
@@ -369,7 +215,71 @@ body {
 }
 
 
-/* 로그인 섹션 스타일 */
+/* 설명 섹션 스타일 */
+.description_section {
+  text-align: center;
+  padding: 50px;
+}
+
+.description_section h2 {
+  margin-top: 310px;
+  margin-bottom: -160px;
+  font-size: 30px;
+}
+
+.description_section p {
+  background-color: rgb(255, 255, 255);
+  padding: 70px;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  width: 75%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 21px;
+  line-height: 2;
+}
+
+
+/* 특징 섹션 스타일 */
+.features_section {
+  text-align: center;
+  margin: 50px auto;
+  width: 80%;
+}
+
+.features_section h2 {
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.feature {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: 700px;
+}
+
+.feature_header {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1E88E5;
+  margin-bottom: 80px;
+}
+
+.feature p2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .login_section {
   padding: 100px;
   text-align: left;
@@ -461,264 +371,11 @@ body {
   height: 6%;
 }
 
-
-.char_count.pw.login {
-  position: absolute;
-  top: 63.8%;
-  right: 7%; /* 문자 수 표시가 input의 오른쪽 끝에 오도록 조정 */
-  transform: translateY(-50%);
-  font-size: 0.3em;
-  color: #888; /* 필요한 경우 색상 조정 */
-  pointer-events: none; /* 클릭 이벤트가 input에 전달되도록 */
-}
-
-.char_count.pw.signup {
-  position: absolute;
-  top: 46.3%;
-  right: 7%; /* 문자 수 표시가 input의 오른쪽 끝에 오도록 조정 */
-  transform: translateY(-50%);
-  font-size: 0.3em;
-  color: #888; /* 필요한 경우 색상 조정 */
-  pointer-events: none; /* 클릭 이벤트가 input에 전달되도록 */
-}
-
-.char_count.check.signup {
-  position: absolute;
-  top: 62.8%;
-  right: 7%; /* 문자 수 표시가 input의 오른쪽 끝에 오도록 조정 */
-  transform: translateY(-50%);
-  font-size: 0.3em;
-  color: #888; /* 필요한 경우 색상 조정 */
-  pointer-events: none; /* 클릭 이벤트가 input에 전달되도록 */
-}
-
-.char_count.nick.signup {
-  position: absolute;
-  top: 78.8%;
-  right: 7%; /* 문자 수 표시가 input의 오른쪽 끝에 오도록 조정 */
-  transform: translateY(-50%);
-  font-size: 0.3em;
-  color: #888; /* 필요한 경우 색상 조정 */
-  pointer-events: none; /* 클릭 이벤트가 input에 전달되도록 */
-}
-
-
-/* 설명 섹션 스타일 */
-.description_section {
-  text-align: center;
-  padding: 50px;
-}
-
-.description_section h2 {
-  margin-top: 310px;
-  margin-bottom: -160px;
-  font-size: 30px;
-}
-
-.description_section p {
-  background-color: rgb(255, 255, 255);
-  padding: 70px;
-  border-radius: 18px;
-  margin: auto;
-  margin-top: 200px;
-  margin-bottom: 50px;
-  width: 75%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  font-size: 21px;
-  line-height: 2;
-}
-
-/* Modal 스타일 */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal {
-  background: white;
-  padding: 20px;
-  border-radius: 30px;
-  max-width: 400px;
-  width: 90%;
-  height: 47%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-
-.close-button {
-  position: absolute;
-  top: 4%;
-  right: 90%;
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.modal h2 {
-  margin-top: 10%;
-  text-align: center;
-}
-
-.modal input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 2px solid #000000;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-.modal log_close {
-  width: 100%;
-  padding: 3px;
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 30px;
-}
-
-
-/* 회원가입 모달 */
-
-.SignUp_modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.SignUp_modal {
-  background: white;
-  padding: 20px;
-  border-radius: 30px;
-  max-width: 400px;
-  width: 100%;
-  height: 65%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-
-.SignUp_close-button {
-  position: absolute;
-  top: 4%;
-  right: 90%;
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.SignUp_modal h2 {
-  margin-top: 10%;
-  text-align: center;
-}
-
-.SignUp_modal input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 2px solid #000000;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-.SignUp_modal log_close {
-  width: 100%;
-  padding: 3px;
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 30px;
-}
-
-@media (max-width: 768px) {
-  .modal {
-    background: white;
-    padding: 20px;
-    border-radius: 30px;
-    max-width: 400px;
-    width: 90%;
-    height: 55%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-
-  .SignUp_modal {
-    background: white;
-    padding: 20px;
-    border-radius: 30px;
-    max-width: 400px;
-    width: 100%;
-    height: 77.5%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-  
-}
-
-/* 특징 섹션 스타일 */
-.features_section {
-  text-align: center;
-  margin: 50px auto;
-  width: 80%;
-}
-
-.features_section h2 {
-  margin-bottom: 50px;
-  font-size: 30px;
-}
-
-.features {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 60px;
-}
-
-.feature {
-  background-color: #fff;
-  border-radius: 30px;
-  padding: 20px;
-  width: 45%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  height: 700px;
-}
-
-.feature_header {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1E88E5;
-  margin-bottom: 70px;
-}
-
-.feature p2 {
-  font-size: 25px;
-  font-weight: bold;
-}
-
 /* 반응형 디자인 추가 */
 @media (max-width: 768px) {
   .login_section {
     margin-top: 40%;
-    width: 100%;
+    width: 90%;
     padding: 20px;
   }
 
@@ -765,134 +422,3 @@ body {
     font-size: 18px; /* 폰트 크기 조정 */
   }
 }
-
-@media (max-width: 768px) {
-  .nav_bar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-  }
-
-  .nav_logo {
-    margin-right: auto;
-    margin-left: 20px;
-  }
-  .nav_logo img{
-
-    width: 50%;
-    height: 50%;
-  }
-  .nav_main {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 20px;
-  }
-
-  .nav_main li {
-    margin: 0 10px;
-  }
-
-  .nav_login {
-    margin-right: 20px;
-  }
-
-  .nav_login div {
-    font-size: 12px; /* Maintain font size */
-  }
-}
-
-/* 푸터 스타일 */
-
-.footer {
-  background-color: #1A1A1A;
-  color: #fff;
-  text-align: center;
-  padding: 30px 0;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column; /* Changed to column layout for responsiveness */
-  align-items: center;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-
-}
-
-.footer-links a {
-  color: inherit;
-  text-decoration: none;
-  margin: 0 20px; /* Adjusted margin for spacing */
-  font-family: 'NanumL2';
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  margin-right: 30%;
-  
-}
-
-.social-icons a {
-  margin: 0 10px; /* Adjusted margin for spacing */
-}
-
-.social-icons img {
-  width: 30px; /* Reduced image size for better fit */
-}
-
-.footer-icon {
-  position: relative;
-  margin-left: 10%; /* Adjust margin-left to move the logo/icon slightly to the right */
-  margin-bottom: 50%; /* Maintain bottom margin for spacing */
-}
-
-.F_dump {
-
-  margin-right: 21%;
-
-}
-
-.address {
-  margin-bottom: 10px; /* Added margin bottom for spacing */
-}
-.copyright {
-  margin-right: 5.1%;
-  font-family: 'NanumL2'; /* Added margin bottom for spacing */
-}
-
-/* 반응형 디자인 추가 */
-@media (min-width: 769px) {
-  .footer-content {
-    flex-direction: row; /* Revert to row layout for larger screens */
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-links {
-    margin-bottom: 0; /* Remove margin bottom for larger screens */
-  }
-
-  .social-icons {
-    margin-bottom: 0; /* Remove margin bottom for larger screens */
-  }
-
-  .social-icons a {
-    margin: 0 20px; /* Adjusted margin for spacing */
-  }
-
-  .footer-icon {
-    margin-bottom: 0; /* Remove margin bottom for larger screens */
-  }
-
-  .address {
-    margin-bottom: 0; /* Remove margin bottom for larger screens */
-  }
-}
-
