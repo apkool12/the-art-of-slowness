@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const SmallCalendar = ({ weekCalendarList }) => {
   return (
     <div className="small-calendar-container">
-      <h1 className="small-calendar-title"></h1>
       <div className="small-calendar">
         <table>
           <tbody>
